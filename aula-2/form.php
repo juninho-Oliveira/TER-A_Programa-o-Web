@@ -1,30 +1,34 @@
+<?php
+$nome = $_GET["nome"]; // metodo get
+$idade = $_GET["idade"];
+
+
+$nome = $_POST["nome"]; // metodo POSt
+$idade = $_POST["idade"];
+
+
+
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>formulario</title>
+    <title>aula-2</title>
 </head>
 
 <body>
-
-    <form action="aula.php" method="GET">
-        
-        <fieldset >
-            <label for="nome">Nome: </label>
-            <input type="text" placeholder="Digite seu nome" id="nome" name="nome">
-            <br />
-
-            <label for="idade">Idade: </label>
-            <input type="number" placeholder="Digite seu nome" id="idade" name="idade">
-
-            <br />
-            <input type="submit" value="Enviar">Enviar</input>
-        </fieldset>
-
-    </form>
-
+    <?php
+    echo"<div style='background-color: green;'>";
+    //Este bloco está no BODY
+    echo "Hellor World !!!";
+    echo "<br/>";
+    // echo "Nome: " . $name . " Idade: " . $idade;
+    echo "<h2 style='color: white;'> Nome:  $nome,  Idade: $idade</h2>";
+    echo"</div>";
+    ?>
 </body>
 
 </html>
